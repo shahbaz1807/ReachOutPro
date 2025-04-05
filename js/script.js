@@ -6,7 +6,7 @@ const addCategoryBtn = document.getElementById("addCategoryBtn");
 // Function to load categories from the backend
 async function loadCategories() {
     try {
-        const response = await fetch("http://localhost:3000/categories");  // Assuming your server is running on localhost:3000
+        const response = await fetch("https://reach-out-pro-backend.vercel.app/categories");  // Assuming your server is running on localhost:3000
         const data = await response.json();
 
         if (data.success) {
@@ -57,7 +57,7 @@ async function addCategory() {
         };
 
         try {
-            const response = await fetch("http://localhost:3000/add-Categories", {
+            const response = await fetch("https://reach-out-pro-backend.vercel.app/add-Categories", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
