@@ -26,7 +26,7 @@ let messages = [];
 // Load messages from backend
 async function loadMessages() {
     try {
-        const response = await fetch(`http://localhost:3000/categories/${categoryName}`);
+        const response = await fetch(`https://reach-out-pro-backend.vercel.app/categories/${categoryName}`);
         const data = await response.json();
 
         if (data.success) {
@@ -93,7 +93,7 @@ async function addMessage() {
         };
 
         try {
-            const response = await fetch(`http://localhost:3000/add-message`, {
+            const response = await fetch(`https://reach-out-pro-backend.vercel.app/add-message`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
