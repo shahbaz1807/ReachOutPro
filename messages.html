@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ReachOutPro | Messages</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/free-colorful-icons/360/messages.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <button id="backButton" class="button button-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Back
+            </button>
+            <h1 id="categoryTitle" class="subtitle">Loading...</h1>
+        </div>
+
+        <div class="messages-container" id="messagesContainer">
+            <div id="loadingMessages" class="loading">Loading messages...</div>
+            <div id="noMessages" class="no-messages" style="display: none;">No messages yet. Be the first to post!</div>
+            <div id="messagesList" class="messages-list">
+                <!-- Messages will be dynamically added here -->
+            </div>
+        </div>
+
+        <div class="message-input">
+            <textarea id="newMessage" placeholder="Type your message here..." class="textarea" rows="3"></textarea>
+            <button id="sendMessageBtn" class="button">
+                Save
+            </button>
+        </div>
+    </div>
+
+    <script src="/js/messages.js"></script>
+</body>
+
+</html>
