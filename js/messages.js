@@ -51,7 +51,6 @@ function formatDate(dateString) {
     });
 }
 
-
 // Render messages
 function renderMessages() {
     messagesList.innerHTML = "";
@@ -75,12 +74,13 @@ function renderMessages() {
             <div class="message-header">
                 <span class="message-time">${formatDate(message.createdAt)}</span>
             </div>
-            <p>${message.text}</p>
+            <p>${message.text.replace(/\n/g, "<br>")}</p>
         `;
 
         messagesList.appendChild(messageElement);
     });
 }
+
 
 // Add new message
 async function addMessage() {
