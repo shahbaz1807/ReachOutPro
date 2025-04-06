@@ -70,6 +70,7 @@ function renderMessages() {
         const messageElement = document.createElement("div");
         messageElement.className = "message";
 
+        // Replace \n with <br> for line breaks in HTML
         messageElement.innerHTML = `
             <div class="message-header">
                 <span class="message-time">${formatDate(message.createdAt)}</span>
